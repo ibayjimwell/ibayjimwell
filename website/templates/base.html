@@ -22,7 +22,7 @@
             {% include 'main-card.html' %}
             <div class="flex flex-col gap-1 mx-5">
                 <nav class="bg-white border border-gray-200 rounded-lg shadow-sm py-2" id="navigation">
-                <div class="flex flex-row mx-5 gap-3 md:gap-4">
+                <div class="flex flex-row flex-wrap mx-5 gap-1 md:gap-4">
                     <a href="{% url 'index' %}#navigation" class="text-sm font-bold px-4 py-2 rounded-lg {% if current_route == 'index' %}bg-blue-700 text-gray-50{% else %}text-gray-900{% endif %}">
                         Projects
                     </a>
