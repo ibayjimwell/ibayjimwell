@@ -2,12 +2,12 @@ from django.shortcuts import render
 from .models import Project
 
 def index(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all().order_by('-created_at')
     current_route = 'index'
     return render(request, 'index.html', {'projects': projects, 'current_route': current_route})
 
 def project_list(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all().order_by('-created_at')
     return render(request, 'project-list.html', {'projects': projects})
 
 def experience(request):
