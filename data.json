@@ -1,0 +1,76 @@
+{
+    "fullname": "Jimwell Bustos Ibay",
+    "name": "Jimwell Ibay",
+    "profession": "Web Application Developer",
+    "linkedin": "https://www.linkedin.com/in/ibayjimwell/",
+    "github": "https://github.com/ibayjimwell",
+    "email": "ibayjimwell@gmail.com",
+    "section": [
+        {
+            "title": "About Me",
+            "content": "I am a Web Application Developer with a passion for developing modern and latest programs that contribute to the efficiency and effectiveness of organizational success. I have a strong background in Web Development, Programming and Computer Networking."
+        },
+        {
+            "title": "Back-end Development",
+            "content": "I have experience in Back-end Development using various Frameworks. I can create robust Server-Side Applications, manage Databases, and implement APIs to ensure seamless communication between the Front-end and Back-end."
+        },
+        {
+            "title": "Front-end Development",
+            "content": "I have a solid understanding of Front-end technologies and can create responsive and user-friendly interfaces. I am proficient in HTML, CSS, and JavaScript, and I can work with frameworks like React and Vue.js to build dynamic Web Applications."
+        },
+        {
+            "title": "Landing Page Development",
+            "content": "I can design and develop Landing Pages that are visually appealing and optimized for conversions. I focus on creating engaging user experiences that effectively communicate the brand's message and drive user action."
+        },
+        {
+            "title": "Desktop Application Development",
+            "content": "I have experience in developing Desktop Applications using languages like Java and C#. I can create Cross-Platform Applications that provide a seamless user experience across different Operating Systems."
+        }
+    ],
+    "experience": [
+        {
+            "title": "Desktop Application Developer",
+            "company": "ADC Hotel and Resort",
+            "duration": "May 2025 - Jun 2025",
+            "description": "Developing a booking and check-in system for ADC Hotel and Resort to manage guests data and reservation as a capstone project."
+        },
+        {
+            "title": "Network Administrator Assistant",
+            "company": "ACLC College - Apalit",
+            "duration": "Feb 2023 - Mar 2023",
+            "description": "Assisting a Network Administrator in managing and maintaining the college's network infrastructure, troubleshooting computer issues and cleaning a computer labs as a OJT student."
+        }
+    ],
+    "projects": [
+        {
+            "title": "Background Remover",
+            "description": "Easily remove backgrounds from your photos and images with our powerful and intuitive tool. Perfect for e-commerce, social media, and more!",
+            "link": "https://backgroundremove.vercel.app/"
+        },
+        {
+            "title": "Timeny",
+            "description": "Know your remaining life according to average life expectancy of human and discover more info about your birthday.",
+            "link": "https://timeny.vercel.app/"
+        },
+        {
+            "title": "Green Jobs",
+            "description": "Browse or post an environmental jobs that you can work, fulltime or partime to contribute to save the mother earth.",
+            "link": "https://greenjobs.vercel.app/"
+        },
+        {
+            "title": "IP Info",
+            "description": "A web application that provides information about your IP address, including geolocation.",
+            "link": "https://myipinfo.vercel.app/"
+        },
+        {
+            "title": "Style Diaries",
+            "description": "Coming soon...",
+            "link": ""
+        },
+        {
+            "title": "Youtube To MP3",
+            "description": "Coming soon...",
+            "link": ""
+        }
+    ]
+}
