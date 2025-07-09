@@ -13,7 +13,7 @@ Follow on Twitter:
 
 <!-- - 🤝 I’m looking for help with [Testing](https://example.com/) -->
 
-- 👨‍💻 All of my projects are available at [https://ibayjimwellbustos.vercel.app/](https://ibayjimwellbustos.vercel.app/)
+- 👨‍💻 All of my projects are available at [https://ibayjimwellbustos.vercel.app/](https://ibayjimwellbustos.vercel.app/#projects)
 
 <!-- - 📝 I regularly write articles on [https://example.com/](https://example.com/) -->
 
@@ -21,7 +21,7 @@ Follow on Twitter:
 
 - 📫 How to reach me **ibayjimwell@gmail.com**
 
-- 📄 Know about my experiences [https://ibayjimwellbustos.vercel.app/](https://ibayjimwellbustos.vercel.app/)
+- 📄 Know about my experiences [https://ibayjimwellbustos.vercel.app/](https://ibayjimwellbustos.vercel.app/#experience)
 
 <!-- - ⚡ Fun fact **Testing** -->
 
