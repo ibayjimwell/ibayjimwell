@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Jimwell Bustos Ibay</h1>
 <h3 align="center">I am <strong>Web Developer</strong> with a experience for developing modern and scalable <strong>Web Applications</strong> that can contribute to the efficiency and effectiveness of organization success. I have strong background in <strong>Web Development</strong> and <strong>Computer Programming</strong>.</h3>
 
-- 🌱 I’m currently learning **Django and FastAPI**
+- 🌱 I’m currently learning **React and Express.js**
 
 - 👨‍💻 All of my projects are available at [https://ibayjimwellbustos.vercel.app/#projects](https://ibayjimwellbustos.vercel.app/#projects)
 
