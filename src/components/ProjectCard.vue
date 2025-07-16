@@ -21,8 +21,8 @@
     </h3>
 
     <!-- Description takes up available space -->
-    <p class="text-gray-600 text-base leading-relaxed z-10 relative grow">
-        {{ item.description }}
+    <p class="text-gray-600 text-base leading-relaxed z-10 relative grow" v-html="item.description">
+        
     </p>
 
     <!-- Spacer to push the button to bottom -->
