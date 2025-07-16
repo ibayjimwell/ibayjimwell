@@ -43,6 +43,11 @@
   ],
   "projects": [
     {
+      "title": "Moviary",
+      "description": "A <strong>Web Application</strong> that you can search movies, browse pupular movies and see the trending movies.",
+      "link": "https://github.com/ibayjimwell/moviary"
+    },
+    {
       "title": "Student Management System",
       "description": "Under Development...",
       "link": "https://student-management-system-demo.vercel.app/"
@@ -61,11 +66,6 @@
       "title": "IP Info",
       "description": "A web application that provides information about your IP address, including geolocation.",
       "link": "https://myipinfo.vercel.app/"
-    },
-    {
-      "title": "Under Planning",
-      "description": "Coming soon...",
-      "link": ""
     },
     {
       "title": "Under Planning",
