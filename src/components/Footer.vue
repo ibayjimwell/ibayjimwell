@@ -20,7 +20,7 @@
             @click.prevent="scrollToSection('profile')"  
             class="font-semibold text-gray-700"
             >
-                {{ data.fullname }}
+                {{ data.name }}
             </a>
             <span class="text-gray-500 text-sm">
                 &copy;{{ new Date().getFullYear() }} All rights reserved.
