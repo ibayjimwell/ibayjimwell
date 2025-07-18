@@ -8,15 +8,15 @@
   "section": [
     {
       "title": "About Me",
-      "content": "I am <strong>Web Developer</strong> with a experience for developing modern and scalable <strong>Web Applications</strong> that can contribute to the efficiency and effectiveness of organization success. I have strong background in <strong>Web Development</strong> and <strong>Computer Programming</strong>. You can download my CV for more information."
+      "content": "I am<strong>Fullstack Web Developer</strong> with a experience for developing modern and scalable <strong>Web Applications</strong> that can contribute to the efficiency and effectiveness of organization success. I have strong background in <strong>Web Development</strong> and <strong>Computer Programming</strong>. You can download my CV for more information."
     },
     {
       "title": "Backend Development",
-      "content": "I have experience in backend development using <strong>Django</strong> as framework for developing complex <strong>Web Apps</strong> and <strong>Flask</strong> or <strong>FastAPI</strong> for developing <strong>Microservices</strong> and <strong>API</strong>."
+      "content": "I have experience in backend development using <strong>Express.js</strong> for developing complex <strong>Web Apps</strong> and <strong>API's</strong>."
     },
     {
       "title": "Frontend Development",
-      "content": "I have experience in frontend development using <strong>React</strong> or <strong>Vue</strong> as frontend framework for developing <strong>SPA</strong> and <strong>Dynamic UI</strong>. I used <strong>Tailwind CSS</strong> or <strong>Bootstrap</strong> for designing the <strong>User Interface</strong>."
+      "content": "I have experience in frontend development using <strong>React</strong> or <strong>Vue</strong> as frontend framework for developing <strong>SPA</strong> and <strong>Dynamic UI</strong>. I used <strong>Tailwind CSS</strong> for designing the <strong>User Interface</strong>."
     },
     {
       "title": "Database Management",
