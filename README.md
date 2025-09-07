@@ -3,9 +3,9 @@
 
 - 🌱 I’m currently learning **MERN Stack**
 
-- 👨‍💻 All of my projects are available at [https://ibayjimwellbustos.vercel.app/#projects](https://ibayjimwellbustos.vercel.app/#projects)
+- 👨‍💻 All of my projects are available at [https://ibayjimwell.vercel.app/#projects](https://ibayjimwell.vercel.app/#projects)
 
-- 📄 Know about my experiences [https://ibayjimwellbustos.vercel.app/#experience](https://ibayjimwellbustos.vercel.app/#experience)
+- 📄 Know about my experiences [https://ibayjimwell.vercel.app/#experience](https://ibayjimwell.vercel.app/#experience)
 
 - 💬 Ask me about **Web Development, IT and Computer Programming**
 
