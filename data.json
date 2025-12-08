@@ -8,15 +8,15 @@
   "section": [
     {
       "title": "About Me",
-      "content": "I am<strong>Fullstack Web Developer</strong> with a experience for developing modern and scalable <strong>Web Applications</strong> that can contribute to the efficiency and effectiveness of organization success. I have strong background in <strong>Web Development</strong> and <strong>Computer Programming</strong>. You can download my CV for more information."
+      "content": "I am<strong>Fullstack Web Developer</strong> with a experience for developing modern and scalable <strong>Web Applications</strong> that can contribute to the efficiency and effectiveness of corporate success. I have strong background in <strong>Web Development</strong> and <strong>Computer Programming</strong>. You can download my CV for more information."
     },
     {
       "title": "Backend Development",
-      "content": "I have experience in backend development using <strong>Express.js</strong> for developing complex <strong>Web Apps</strong> and <strong>API's</strong>."
+      "content": "I have experience in backend development using <strong>Express.js</strong> for developing <strong>Web Apps</strong> and <strong>API's</strong>."
     },
     {
       "title": "Frontend Development",
-      "content": "I have experience in frontend development using <strong>React</strong> or <strong>Vue</strong> as frontend framework for developing <strong>SPA</strong> and <strong>Dynamic UI</strong>. I used <strong>Tailwind CSS</strong> for designing the <strong>User Interface</strong>."
+      "content": "I have experience in frontend development using <strong>React</strong> and <strong>Tailwind</strong> as frontend framework for developing <strong>SPA</strong> and <strong>Dynamic UI</strong>."
     },
     {
       "title": "Database Management",
@@ -24,10 +24,16 @@
     },
     {
       "title": "Programming Technologies",
-      "content": "I have experience in different programming languages like <strong>Python</strong> for <strong>Backend Development</strong>, <strong>Automation</strong> and <strong>Scripting</strong>. I also have experience in <strong>JavaScript</strong> for <strong>Fullstack Development</strong> and <strong>Java</strong> or <strong>C#</strong> for developing <strong>Desktop Application</strong>."
+      "content": "I have experience in different programming languages like <strong>Python</strong> for <strong>Backend Development</strong>, <strong>JavaScript</strong> for <strong>Fullstack Development</strong> and <strong>Java</strong> or <strong>C#</strong> for developing <strong>Desktop Application</strong>."
     }
   ],
   "experience": [
+    {
+      "title": "Web Application Developer",
+      "company": "QuickRev Open Source Capstone Project",
+      "duration": "Nov 2025 - Present",
+      "description": "Developing and maintaining a open source capstone project called QuickRev."
+    },
     {
       "title": "Desktop Application Developer",
       "company": "ADC Hotel and Resort",
@@ -43,9 +49,14 @@
   ],
   "projects": [
     {
+      "title": "QuckRev",
+      "description": "A <strong>AI-Powered</strong> application that's can generate reviewer and flashcards in just one click with no effort needed. ",
+      "link": "https://quickrev-app.vercel.app/"
+    },
+    {
       "title": "Moviary",
       "description": "A <strong>Web Application</strong> that you can search movies, browse pupular movies and see the trending movies.",
-      "link": "https://github.com/ibayjimwell/moviary"
+      "link": "https://moviary.vercel.app/"
     },
     {
       "title": "Timeny",
