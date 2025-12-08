@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Jimwell Bustos Ibay</h1>
 <h3 align="center">I am <strong>Fullstack Developer</strong> with a experience for developing modern and scalable <strong>Web Applications</strong> that can contribute to the efficiency and effectiveness of corporate success. I have strong background in <strong>Web Development</strong> and <strong>Computer Programming</strong>.</h3>
 
-- 🌱 I’m currently learning **Advance React**
+- 🌱 I’m currently learning **Spring Boot**
 
 - 👨‍💻 All of my projects are available at [https://ibayjimwell.vercel.app/#projects](https://ibayjimwell.vercel.app/#projects)
 
