@@ -16,26 +16,26 @@
     },
     {
       "title": "Frontend Development",
-      "content": "I have experience in frontend development using <strong>React</strong> and <strong>Tailwind</strong> as frontend framework for developing <strong>SPA</strong> and <strong>Dynamic UI</strong>."
+      "content": "I have experience in frontend development using <strong>React</strong> and <strong>Tailwind</strong> as frontend framework for developing <strong>SPA</strong> and <strong>Responsive UI</strong>."
     },
     {
       "title": "Database Management",
-      "content": "I have experience in creating and manipulating data in a <strong>PostgreSQL Relational Database</strong> and <strong>MongoDB NoSQL Database</strong> and connect them in the <strong>Backend Technology</strong>."
+      "content": "I have experience in creating and manipulating data in a <strong>PostgreSQL Relational Database</strong> and <strong>MongoDB NoSQL Database</strong> and ORM for <strong>Backend Technology</strong>."
     },
     {
       "title": "Programming Technologies",
-      "content": "I have experience in different programming languages like <strong>Python</strong> for <strong>Backend Development</strong>, <strong>JavaScript</strong> for <strong>Fullstack Development</strong> and <strong>Java</strong> or <strong>C#</strong> for developing <strong>Desktop Application</strong>."
+      "content": "I have experience in different programming languages like <strong>Python</strong> for <strong>Backend Development</strong>, <strong>JavaScript or TypeScript</strong> for <strong>Fullstack Development</strong> and <strong>Java</strong> or <strong>C#</strong> for developing <strong>Desktop Application</strong>."
     }
   ],
   "experience": [
     {
       "title": "Web Application Developer",
       "company": "QuickRev Team",
-      "duration": "Nov 2025 - Present",
+      "duration": "Nov 2025",
       "description": "Developing and maintaining a capstone project called QuickRev."
     },
     {
-      "title": "Desktop Application Developer",
+      "title": "System Developer",
       "company": "ADC Hotel and Resort",
       "duration": "May 2025 - Jun 2025",
       "description": "Developing a booking and check-in system for ADC Hotel and Resort to manage guests data and reservation as a capstone project."
@@ -48,6 +48,10 @@
     }
   ],
   "projects": [
+    {
+      "title": "ADC Hotel ( Development )",
+      "description": "A <strong>Hotel Management System</strong> for ADC Hotel to manage check-ins, bookings, guests, staff and more. ",
+    }
     {
       "title": "QuckRev",
       "description": "A <strong>AI-Powered</strong> application that's can generate reviewer and flashcards in just one click with no effort needed. ",
@@ -62,21 +66,6 @@
       "title": "Timeny",
       "description": "Know your remaining life according to average life expectancy of human and discover more info about your birthday.",
       "link": "https://timeny.vercel.app/"
-    },
-    {
-      "title": "Green Jobs",
-      "description": "Browse or post an environmental jobs that you can work, fulltime or partime to contribute to save the mother earth.",
-      "link": "https://greenjobs.vercel.app/"
-    },
-    {
-      "title": "IP Info",
-      "description": "A web application that provides information about your IP address, including geolocation.",
-      "link": "https://myipinfo.vercel.app/"
-    },
-    {
-      "title": "Under Planning",
-      "description": "Coming soon...",
-      "link": ""
     }
   ]
 }
