@@ -51,7 +51,8 @@
     {
       "title": "ADC Hotel ( Development )",
       "description": "A <strong>Hotel Management System</strong> for ADC Hotel to manage check-ins, bookings, guests, staff and more. ",
-    }
+      "link": "https://adc-hotel-app.vercel.app/"
+    },
     {
       "title": "QuckRev",
       "description": "A <strong>AI-Powered</strong> application that's can generate reviewer and flashcards in just one click with no effort needed. ",
