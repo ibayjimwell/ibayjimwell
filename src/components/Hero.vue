@@ -1,5 +1,5 @@
 <template>
-  <section id="profile" class="relative pt-[90px] pb-12 bg-gradient-to-b from-white to-gray-50">
+  <section id="profile" class="relative pt-[130px] pb-12 bg-gradient-to-b from-white to-gray-50">
     <div class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center gap-8">
       <div class="flex-shrink-0">
         <div class="rounded-full p-1 bg-white shadow-lg">
@@ -13,9 +13,9 @@
         <p class="text-lg md:text-xl text-gray-700 mb-4">{{ data.profession }} — I build web applications that solve business problems.</p>
 
         <div class="flex gap-3 flex-wrap mb-4">
-          <a :href="data.cv" target="_blank" class="px-5 py-2 rounded-full border font-medium hover:bg-gray-50">Download CV</a>
-          <button @click="scrollTo('#projects')" class="bg-black text-white px-5 py-2 rounded-full font-medium">See Projects</button>
-          <button @click="openEmail" class="px-5 py-2 rounded-full border font-medium hover:bg-gray-50">Contact</button>
+          <a :href="data.cv" target="_blank" class="px-5 py-2 rounded-full border font-medium bg-black text-white">Download CV</a>
+          <button @click="scrollTo('#projects')" class="px-5 py-2 rounded-full border font-medium hover:bg-gray-100">See Projects</button>
+          <button @click="openEmail" class="px-5 py-2 rounded-full border font-medium hover:bg-gray-100">Contact</button>
         </div>
 
         <div class="flex items-center gap-3">

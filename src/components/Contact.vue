@@ -12,7 +12,7 @@
 
           <div class="flex items-center gap-3">
             <button type="submit" class="px-4 py-2 rounded-full bg-blue-600 text-white">Send message</button>
-            <a :href="`mailto:${data.email}`" class="text-sm text-gray-500">Or email me directly</a>
+            <a :href="`mailto:${data.email}`" class="text-sm text-blue-800">Or email me directly</a>
           </div>
 
           <p v-if="sent" class="text-sm text-green-600 mt-2">Message prepared — opened in your email client.</p>

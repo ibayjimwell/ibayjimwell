@@ -9,19 +9,19 @@
           <h3 class="text-xl font-semibold">{{ project.title }}</h3>
           <p class="text-sm text-gray-500">{{ project.slug }}</p>
         </div>
-        <button @click="$emit('close')" class="ml-auto text-gray-400 hover:text-gray-700">Close</button>
+        <button @click="$emit('close')" class="ml-auto text-blue-800">Close</button>
       </div>
 
       <hr class="my-4"/>
 
       <div>
-        <h4 class="text-sm font-semibold text-gray-700 mb-1">Problem</h4>
+        <h4 class="text-base font-bold text-gray-700 mb-1">Problem</h4>
         <p class="text-gray-700 mb-3">{{ project.caseStudy.problem }}</p>
 
-        <h4 class="text-sm font-semibold text-gray-700 mb-1">Solution</h4>
+        <h4 class="text-base font-bold text-gray-700 mb-1">Solution</h4>
         <p class="text-gray-700 mb-3">{{ project.caseStudy.solution }}</p>
 
-        <h4 class="text-sm font-semibold text-gray-700 mb-1">Impact</h4>
+        <h4 class="text-base font-bold text-gray-700 mb-1">Impact</h4>
         <p class="text-gray-700 mb-3">{{ project.caseStudy.impact }}</p>
 
         <div class="mt-4 flex gap-3">

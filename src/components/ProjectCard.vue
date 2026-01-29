@@ -9,7 +9,7 @@
 
     <header class="mb-2 mt-6">
       <h3 class="text-lg font-semibold text-gray-900">{{ project.title }}</h3>
-      <p class="text-xs text-gray-500 mt-1">/{{ project.slug }}</p>
+      <p class="text-xs text-gray-500 mt-1">{{ project.slug }}</p>
     </header>
 
     <p class="text-sm text-gray-600 grow" v-html="project.description"></p>
@@ -23,8 +23,9 @@
     <div class="mt-4 flex items-center justify-between">
       <a :href="project.link" @click.stop target="_blank" class="px-3 py-2 rounded-lg bg-blue-50 text-blue-600 font-semibold hover:bg-blue-100">Live demo</a>
       <div class="flex items-center gap-3">
-        <button v-if="project.repo" @click.stop="openRepo" class="text-sm text-gray-500 hover:text-gray-700">View repo</button>
-        <button @click.stop="openCase" class="text-sm text-gray-500 hover:text-gray-700">Case study</button>
+        <button v-if="project.repo" @click.stop="openRepo" class="text-sm text-blue-800">View repo</button>
+          |
+        <button @click.stop="openCase" class="text-sm text-blue-800">Case study</button>
       </div>
     </div>
   </article>
