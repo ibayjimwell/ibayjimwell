@@ -1,5 +1,5 @@
 <script setup>
-    import data from '../../data.json'
+    import data from '../data.json'
 
     const openLink = (url) => {
         window.open(url, '_blank')

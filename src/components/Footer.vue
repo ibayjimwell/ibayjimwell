@@ -1,5 +1,5 @@
 <script setup>
-    import data from '../../data.json'
+    import data from '../data.json'
 
     const scrollToSection = (sectionId, closeMenu = false) => {
       const el = document.getElementById(sectionId);
