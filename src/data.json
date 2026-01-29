@@ -1,0 +1,110 @@
+{
+  "fullname": "Jimwell Bustos Ibay",
+  "name": "Jimwell Ibay",
+  "profession": "Fullstack Developer",
+  "linkedin": "https://www.linkedin.com/in/ibayjimwell/",
+  "github": "https://github.com/ibayjimwell",
+  "email": "ibayjimwell@gmail.com",
+  "cv": "/jimwell-ibay-cv.pdf",
+  "projectsPage": "/projects",
+  "section": [
+    {
+      "title": "About Me",
+      "content": "I build modern, reliable, and scalable web applications that help businesses run better. I focus on pragmatic engineering: clean components, reliable APIs, and measurable outcomes. Download my CV for full details."
+    },
+    {
+      "title": "Backend Development",
+      "content": "APIs and services with <strong>Express.js</strong>, <strong>Node.js</strong> and Python (Flask/Django). I design RESTful endpoints, authentication, and efficient DB schemas."
+    },
+    {
+      "title": "Frontend Development",
+      "content": "Interactive, accessible frontends using <strong>Vue 3</strong>, <strong>React</strong>, and <strong>Tailwind CSS</strong>. I build component libraries and reusable UI patterns suitable for corporate apps."
+    },
+    {
+      "title": "Databases & DevOps",
+      "content": "Production-ready data systems (PostgreSQL, MongoDB), containerization with Docker, CI pipelines and deployment best practices."
+    },
+    {
+      "title": "Languages & Tools",
+      "content": "JavaScript/TypeScript, Python, Java. Git, Docker, Vercel, and modern testing & linting workflows."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Web Application Developer",
+      "company": "QuickRev Team",
+      "duration": "Nov 2025 — Present",
+      "description": "Lead feature development for QuickRev: frontend components, backend APIs, and deployment automation. Focused on scalability and customer conversion."
+    },
+    {
+      "title": "System Developer",
+      "company": "ADC Hotel and Resort",
+      "duration": "May 2025 — Jun 2025",
+      "description": "Delivered a complete booking and check-in system. Automated guest workflows and implemented reporting features used during pilot operations."
+    },
+    {
+      "title": "Network Administrator Assistant",
+      "company": "ACLC College - Apalit",
+      "duration": "Feb 2023 — Mar 2023",
+      "description": "Supported network maintenance, troubleshooting, and lab environment setup."
+    }
+  ],
+  "projects": [
+    {
+      "title": "ADC Hotel Management",
+      "slug": "adc-hotel",
+      "description": "Enterprise-grade Hotel Management System for bookings, check-in, staff and reporting. Real-world pilot deployment with role-based access and notifications.",
+      "link": "https://adc-hotel-app.vercel.app/",
+      "repo": "https://github.com/ibayjimwell/hotel-management-system-desktop",
+      "icon": "/project-icons/adc-hotel.png",
+      "tech": ["Vue 3", "Tailwind CSS", "PostgreSQL", "Java (Analytics)"],
+      "caseStudy": {
+        "problem": "Manual check-in and booking caused slow front-desk operations.",
+        "solution": "Built an integrated system with booking, check-in, staff roles and reporting. Implemented efficient queries and UX to minimize steps.",
+        "impact": "Reduced average check-in time during pilot; improved staff productivity and reporting insights."
+      }
+    },
+    {
+      "title": "QuickRev (AI Reviewer)",
+      "slug": "quickrev",
+      "description": "AI-powered reviewer & flashcard generator that turns source material into study-ready content in one click.",
+      "link": "https://quickrev-app.vercel.app/",
+      "repo": "",
+      "icon": "/project-icons/quickrev.svg",
+      "tech": ["React", "Node.js", "OpenAI API", "Vercel", "TypeScript"],
+      "caseStudy": {
+        "problem": "Students spend hours creating study materials manually.",
+        "solution": "Built a one-click pipeline that generates flashcards using an LLM, with export and review flows.",
+        "impact": "Significantly reduced content creation time for users; clear UX for rapid iteration."
+      }
+    },
+    {
+      "title": "Moviary",
+      "slug": "moviary",
+      "description": "Clean movie browsing app with search, trending, and accessible UI — built with performance and clean code in mind.",
+      "link": "https://moviary.vercel.app/",
+      "repo": "https://github.com/ibayjimwell/moviary",
+      "icon": "/project-icons/moviary.png",
+      "tech": ["Next.js", "TMDB API", "Tailwind CSS"],
+      "caseStudy": {
+        "problem": "Users want fast, accessible browsing of movies without clutter.",
+        "solution": "Built an optimized UI and efficient data fetching strategy.",
+        "impact": "Fast load times and accessible layout; easy to extend for new content sources."
+      }
+    },
+    {
+      "title": "Timeny",
+      "slug": "timeny",
+      "description": "A polished app showing life-expectancy visualizations and calendar insights, built as a fast SPA.",
+      "link": "https://timeny.vercel.app/",
+      "repo": "",
+      "icon": "/project-icons/timeny.png",
+      "tech": ["Vue 3", "Tailwind CSS", "Vercel"],
+      "caseStudy": {
+        "problem": "Users want meaningful visualizations of date-based information.",
+        "solution": "Created an accessible interactive tool with clear visual cues.",
+        "impact": "High user engagement for novelty and clarity."
+      }
+    }
+  ]
+}
