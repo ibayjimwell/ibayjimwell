@@ -13,11 +13,7 @@
     "HTML",
     "CSS",
     "Tailwind",
-    "Vue",
     "React",
-    "Next",
-    "React Native",
-    "Expo",
     "Express",
     "Flask",
     "Django",
@@ -58,7 +54,7 @@
     },
     {
       "title": "System Developer",
-      "company": "ADC Hotel and Resort",
+      "company": "ADC Hotel",
       "duration": "May 2025 — Jun 2025",
       "description": "Delivered a complete booking and check-in system. Automated guest workflows and implemented reporting features used during pilot operations."
     },
