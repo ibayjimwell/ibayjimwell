@@ -65,22 +65,6 @@ Reach me via email for collaboration, freelancing, or corporate projects:
 
 ---
 
-## 📊 GitHub Statistics
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ibayjimwell&theme=default&hide_border=false&include_all_commits=true&count_private=true)  
-![Streak Stats](https://nirzak-streak-stats.vercel.app/?user=ibayjimwell&theme=default&hide_border=false)
-
----
-
-### 🔝 Top Repositories
-![Top Repos](https://github-contributor-stats.vercel.app/api?username=ibayjimwell&limit=5&theme=default&combine_all_yearly_contributions=true)
-
----
-
-### 🏆 GitHub Trophies
-![Trophies](https://github-profile-trophy.vercel.app/?username=ibayjimwell&theme=default&no-frame=true&no-bg=false&margin-w=4)
-
----
-
 ## ✍️ Developer Quote
 *"Code is not just about writing software; it’s about building solutions that matter."*  
 ![Quote](https://quotes-github-readme.vercel.app/api?type=vetical&theme=light)
