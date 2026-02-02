@@ -1,14 +1,14 @@
-<h1 align="center">Hi 👋, I'm Jimwell Bustos Ibay</h1>
+<h1 align="center">Hi 👋, This is Jimwell Bustos Ibay official github</h1>
 <h3 align="center">
 Full-Stack Web Developer | Building Modern, Scalable, and Efficient Web Applications for Businesses
 </h3>
 
 ---
 
-## 💼 About Me
-I am a **Full-Stack Developer** with a strong background in **web development and computer programming**. I specialize in delivering **modern, scalable, and maintainable web applications** that improve business efficiency, user experience, and corporate success.  
+## 💼 About Jimwell Ibay
+A **Full-Stack Developer** with a strong background in **web development and computer programming**. He's specialize in delivering **modern, scalable, and maintainable web applications** that improve business efficiency, user experience, and corporate success.  
 
-I have experience building real-world applications, My focus is always on **quality, performance, and measurable impact**.
+He's have experience building real-world applications, He's focus is always on **quality, performance, and measurable impact**.
 
 ---
 
@@ -18,13 +18,13 @@ I have experience building real-world applications, My focus is always on **qual
 ---
 
 ## 👨‍💻 Projects
-Explore all my projects, with live demos and case studies:  
+Explore all Jimwell Ibay projects, with live demos and case studies:  
 [https://ibayjimwell.vercel.app/#projects](https://ibayjimwell.vercel.app/#projects)
 
 ---
 
 ## 📄 Experience
-Discover my work experience, technologies used, and impact on projects:  
+Discover Jimwell Ibay experience, technologies used, and impact on projects:  
 [https://ibayjimwell.vercel.app/#experience](https://ibayjimwell.vercel.app/#experience)
 
 ---
@@ -37,8 +37,8 @@ Discover my work experience, technologies used, and impact on projects:
 
 ---
 
-## 📫 Contact Me
-Reach me via email for collaboration, freelancing, or corporate projects:  
+## 📫 Contact Jimwell Ibay
+Reach via email for collaboration, freelancing, or corporate projects:  
 **ibayjimwell@gmail.com**
 
 ---
@@ -67,7 +67,7 @@ Reach me via email for collaboration, freelancing, or corporate projects:
 
 ---
 
-## 💰 Support My Work
-If my projects and tutorials helped you, you can support me:  
+## 💰 Support Jimwell Ibay Work
+If Jimwell Ibay projects and tutorials helped you, you can support on:  
 [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/ibayjimwell)
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/JimwellIbay)
