@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, BriefcaseBusiness } from 'lucide-react';
 import  portfolioData  from './PortfolioData';
 
 export default function HeroCard() {
@@ -33,7 +33,7 @@ export default function HeroCard() {
         <div className="relative z-10 h-full flex flex-col justify-between">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white/90 text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4" />
+              <BriefcaseBusiness className="w-4 h-4" />
               <span>Available for projects</span>
             </div>
             
