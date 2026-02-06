@@ -77,7 +77,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               <button
                 ref={closeButtonRef}
                 onClick={onClose}
-                className="p-2 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="p-2 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />

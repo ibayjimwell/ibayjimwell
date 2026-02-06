@@ -1,86 +1,163 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, Loader2, Bot, User } from 'lucide-react';
-import  portfolioData  from './PortfolioData';
+import React, { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, Send, Loader2 } from "lucide-react";
+import { GoogleGenAI } from "@google/genai";
+import portfolioData from "./PortfolioData";
 
-const SYSTEM_PROMPT = `You are "Jimwell Ibay — Portfolio Assistant". Answer user questions ONLY using the portfolio data provided below. Do not invent facts. If the user asks for something not present in the portfolio, respond: "I can only answer questions about Jimwell Ibay's portfolio and projects; I don't have information on that."
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
+const genAI = API_KEY ? new GoogleGenAI({ apiKey: API_KEY }) : null;
 
-Be helpful, concise, and friendly. When discussing projects, mention relevant technologies and outcomes. When asked about skills, list them clearly.
+const SYSTEM_PROMPT = `
+You are Jimwell Ibay.
+You speak in a calm, elegant, and formal tone.
+Replies must be short and conversational.
+Answer using the portfolio data.
+Speak in first person.
 
 PORTFOLIO DATA:
-${JSON.stringify(portfolioData, null, 2)}`;
+${JSON.stringify(portfolioData, null, 2)}
+`;
+
+/**
+ * Try several known response shapes and return the first available text.
+ * Keeps the UI resilient to SDK / API shape changes.
+ */
+function extractTextFromGenAIResponse(res) {
+  // Defensive checks for common response shapes
+  try {
+    // SDK style: res.output[0].content[0].text
+    const a = res?.output?.[0]?.content?.[0]?.text;
+    if (a) return a;
+
+    // SDK alternative: res.output[0].contentText
+    const b = res?.output?.[0]?.contentText;
+    if (b) return b;
+
+    // Candidate style: res?.candidates[0]?.content[0]?.text
+    const c = res?.candidates?.[0]?.content?.[0]?.text;
+    if (c) return c;
+
+    // Flat text property
+    const d = res?.text || res?.responseText || res?.content;
+    if (d) return d;
+
+    // Newer SDK shape: res?.outputs?.[0]?.content?.[0]?.text
+    const e = res?.outputs?.[0]?.content?.[0]?.text;
+    if (e) return e;
+
+    // Fallback to JSON stringified response (very last resort)
+    return null;
+  } catch (err) {
+    return null;
+  }
+}
 
 export default function ChatWindow({ isOpen, onClose }) {
   const [messages, setMessages] = useState([
     {
-      role: 'assistant',
-      content: "Hi! I'm Jimwell's portfolio assistant. Ask me anything about his projects, skills, or experience!"
-    }
+      role: "assistant",
+      content: "Hello! You may ask about my work, skills, or projects.",
+    },
   ]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
-  const inputRef = useRef(null);
 
   useEffect(() => {
-    if (isOpen) {
-      inputRef.current?.focus();
-    }
-  }, [isOpen]);
-
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape' && isOpen) {
-        onClose();
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, onClose]);
 
   const sendMessage = async () => {
     if (!input.trim() || isLoading) return;
 
-    const userMessage = { role: 'user', content: input.trim() };
-    setMessages(prev => [...prev, userMessage]);
-    setInput('');
+    // Quick api-key guard
+    if (!genAI) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content:
+            "Chat is not configured. Missing API key.",
+        },
+      ]);
+      return;
+    }
+
+    const userMessage = { role: "user", content: input.trim() };
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
     setIsLoading(true);
 
     try {
-      const conversationHistory = messages
-        .map(m => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.content}`)
-        .join('\n');
+      // Build a compact conversation history to provide context.
+      const history = messages
+        .slice(-8) // keep last few messages to limit size
+        .map((m) => `${m.role === "user" ? "User" : "Jimwell"}: ${m.content}`)
+        .join("\n");
 
-      const fullPrompt = `${SYSTEM_PROMPT}
+      const prompt = `${SYSTEM_PROMPT}
 
-CONVERSATION SO FAR:
-${conversationHistory}
+      Conversation so far:
+      ${history}
 
-User: ${userMessage.content}
+      User: ${userMessage.content}
+      `;
 
-Please respond helpfully based only on the portfolio data provided.`;
+      // Use a currently-supported free model.
+      const modelName = "gemini-2.5-flash";
 
-      const response = await base44.integrations.Core.InvokeLLM({
-        prompt: fullPrompt
+      // Generate content.
+      const response = await genAI.models.generateContent({
+        model: modelName,
+        contents: [{ type: "text", text: prompt }],
       });
 
-      setMessages(prev => [...prev, { role: 'assistant', content: response }]);
-    } catch (error) {
-      setMessages(prev => [...prev, { 
-        role: 'assistant', 
-        content: "Sorry, I'm having trouble responding right now. Please try again later." 
-      }]);
+      // Extract text robustly from multiple possible response shapes
+      const replyText = extractTextFromGenAIResponse(response);
+
+      if (replyText) {
+        // Trim and force short reply (ensure it's concise)
+        const finalReply = replyText.trim().split("\n").slice(0, 6).join("\n"); // cap lines
+        setMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: finalReply },
+        ]);
+      } else {
+        // If we didn't get a text, show friendly message and log the response
+        if (import.meta.env.DEV) {
+          // eslint-disable-next-line no-console
+          console.warn("Unexpected GenAI response shape:", response);
+        }
+        setMessages((prev) => [
+          ...prev,
+          {
+            role: "assistant",
+            content:
+              "I’m currently unavailable. Please try again shortly.",
+          },
+        ]);
+      }
+    } catch (err) {
+      // log for debugging in dev
+      if (import.meta.env.DEV) {
+        // eslint-disable-next-line no-console
+        console.error("GenAI error:", err);
+      }
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content:
+            "I’m currently unavailable. Please try again shortly.",
+        },
+      ]);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       sendMessage();
     }
@@ -93,99 +170,68 @@ Please respond helpfully based only on the portfolio data provided.`;
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.95 }}
-          transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="fixed bottom-24 right-4 sm:right-6 w-[calc(100vw-2rem)] sm:w-96 max-h-[70vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col z-50 overflow-hidden"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Chat with Jimwell Ibay"
+          className="fixed bottom-20 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-24 w-auto sm:w-96 max-h-[85vh] bg-white rounded-2xl shadow-2xl border flex flex-col z-50 overflow-hidden"
         >
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-slate-100 bg-gradient-to-r from-blue-600 to-indigo-600">
+          <div className="relative flex items-center justify-between p-4 bg-blue-600">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                <Bot className="w-5 h-5 text-white" />
+              <div className="relative shrink-0">
+                <img src="profile-pic.png" className="w-10 h-10 rounded-xl" />
+                <span className="absolute top-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white" />
               </div>
-              <div>
-                <h3 className="font-semibold text-white">Portfolio Assistant</h3>
-                <p className="text-xs text-blue-100">Ask about Jimwell's work</p>
+              <div className="min-w-0">
+                <h3 className="text-white font-semibold truncate">Jimwell Ibay</h3>
+                <p className="text-xs text-blue-100">Available for discussion</p>
               </div>
             </div>
-            <button
-              onClick={onClose}
-              className="p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
-              aria-label="Close chat"
-            >
-              <X className="w-5 h-5" />
+            <button onClick={onClose} className="hover:bg-blue-700 p-1 rounded-lg transition-colors">
+              <X className="w-5 h-5 text-white" />
             </button>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[200px] max-h-[400px]">
-            {messages.map((message, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className={`flex gap-3 ${message.role === 'user' ? 'flex-row-reverse' : ''}`}
+          {/* Changed max-h-80 to flex-1 with overflow-y-auto to fill available modal height */}
+          <div className="flex-1 p-4 space-y-4 overflow-y-auto bg-white min-h-[300px]">
+            {messages.map((m, i) => (
+              <div
+                key={i}
+                className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
               >
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                  message.role === 'user' 
-                    ? 'bg-blue-600 text-white' 
-                    : 'bg-slate-100 text-slate-600'
-                }`}>
-                  {message.role === 'user' ? (
-                    <User className="w-4 h-4" />
-                  ) : (
-                    <Bot className="w-4 h-4" />
-                  )}
+                <div
+                  className={`px-4 py-2 rounded-2xl text-sm md:text-base max-w-[85%] ${
+                    m.role === "user" 
+                    ? "bg-blue-600 text-white rounded-tr-none shadow-sm" 
+                    : "bg-slate-100 text-slate-700 rounded-tl-none border border-slate-200"
+                  }`}
+                >
+                  {m.content}
                 </div>
-                <div className={`flex-1 p-3 rounded-2xl text-sm ${
-                  message.role === 'user'
-                    ? 'bg-blue-600 text-white rounded-tr-md'
-                    : 'bg-slate-100 text-slate-700 rounded-tl-md'
-                }`}>
-                  {message.content}
-                </div>
-              </motion.div>
+              </div>
             ))}
-            
+
             {isLoading && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="flex gap-3"
-              >
-                <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
-                  <Bot className="w-4 h-4 text-slate-600" />
-                </div>
-                <div className="bg-slate-100 p-3 rounded-2xl rounded-tl-md">
-                  <Loader2 className="w-5 h-5 text-blue-600 animate-spin" />
-                </div>
-              </motion.div>
+              <div className="flex items-center gap-2 text-slate-500 text-sm">
+                <Loader2 className="animate-spin w-4 h-4" /> Jimwell is typing…
+              </div>
             )}
-            
             <div ref={messagesEndRef} />
           </div>
 
           {/* Input */}
-          <div className="p-4 border-t border-slate-100">
+          <div className="p-4 border-t bg-slate-50">
             <div className="flex gap-2">
               <input
-                ref={inputRef}
-                type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Ask about projects, skills..."
+                onKeyDown={handleKeyDown}
+                placeholder="Ask about my work…"
+                className="flex-1 px-4 py-2 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white"
                 disabled={isLoading}
-                className="flex-1 px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-slate-50 disabled:cursor-not-allowed"
-                aria-label="Type your message"
               />
               <button
                 onClick={sendMessage}
-                disabled={!input.trim() || isLoading}
-                className="px-4 py-2.5 rounded-xl bg-blue-600 text-white hover:bg-blue-700 disabled:bg-slate-300 disabled:cursor-not-allowed transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                aria-label="Send message"
+                className="bg-blue-600 text-white px-4 rounded-xl disabled:opacity-50 hover:bg-blue-700 transition-colors shrink-0"
+                disabled={isLoading || !input.trim()}
               >
                 <Send className="w-4 h-4" />
               </button>

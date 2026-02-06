@@ -10,8 +10,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 flex items-center justify-center shadow-lg shadow-slate-500/20">
-              <img className='rounded-xl' src='profile-pic.png' />
+            <div className="flex items-center justify-center shadow-lg shadow-slate-500/20">
+              <img className='w-10 h-10 rounded-xl' src='profile-pic.png' />
             </div>
             <span className="font-semibold text-slate-800 hidden sm:block">{name}</span>
           </div>
