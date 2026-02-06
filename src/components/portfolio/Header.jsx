@@ -1,6 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Mail, FileText } from 'lucide-react';
-import { portfolioData } from './PortfolioData';
+import  portfolioData  from './PortfolioData';
 
 export default function Header() {
   const { name, linkedin, github, email, cv } = portfolioData;

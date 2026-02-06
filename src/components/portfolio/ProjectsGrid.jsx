@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FolderOpen } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
-import { portfolioData } from './PortfolioData';
+import  portfolioData  from './PortfolioData';
 
 export default function ProjectsGrid() {
   const { projects } = portfolioData;

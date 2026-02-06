@@ -1,7 +1,7 @@
 import React from 'react';
 import { Server, Monitor, Database, Wrench } from 'lucide-react';
 import InfoCard from './InfoCard';
-import { portfolioData } from './PortfolioData';
+import  portfolioData  from './PortfolioData';
 
 const sectionIcons = {
   "Backend Development": Server,

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Loader2, Bot, User } from 'lucide-react';
-import { portfolioData } from './PortfolioData';
+import  portfolioData  from './PortfolioData';
 
 const SYSTEM_PROMPT = `You are "Jimwell Ibay — Portfolio Assistant". Answer user questions ONLY using the portfolio data provided below. Do not invent facts. If the user asks for something not present in the portfolio, respond: "I can only answer questions about Jimwell Ibay's portfolio and projects; I don't have information on that."
 

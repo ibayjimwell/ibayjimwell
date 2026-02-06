@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Send, CheckCircle, Linkedin, Github } from 'lucide-react';
 import InfoCard from './InfoCard';
-import { portfolioData } from './PortfolioData';
+import  portfolioData  from './PortfolioData';
 
 export default function ContactCard() {
   const { email, linkedin, github, name } = portfolioData;

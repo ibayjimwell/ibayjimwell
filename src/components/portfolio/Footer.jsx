@@ -1,5 +1,5 @@
 import React from 'react';
-import { portfolioData } from './PortfolioData';
+import  portfolioData  from './PortfolioData';
 
 export default function Footer() {
   const { name } = portfolioData;

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2 } from 'lucide-react';
 import InfoCard from './InfoCard';
-import { portfolioData } from './PortfolioData';
+import  portfolioData  from './PortfolioData';
 
 const skillColors = {
   Javascript: 'bg-yellow-100 text-yellow-700 border-yellow-200',

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, Calendar, Building2 } from 'lucide-react';
 import InfoCard from './InfoCard';
-import { portfolioData } from './PortfolioData';
+import  portfolioData  from './PortfolioData';
 
 export default function ExperienceCard() {
   const { experience } = portfolioData;

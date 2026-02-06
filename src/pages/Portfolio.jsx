@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from '@/components/portfolio/Header';
-import HeroCard from '@/components/portfolio/HeroCard';
-import Skills from '@/components/portfolio/Skills';
-import ExperienceCard from '@/components/portfolio/ExperienceCard';
-import ProjectsGrid from '@/components/portfolio/ProjectsGrid';
-import SectionCard from '@/components/portfolio/SectionCard';
-import ContactCard from '@/components/portfolio/ContactCard';
-import Footer from '@/components/portfolio/Footer';
-import ChatHead from '@/components/portfolio/ChatHead';
+import Header from '../components/portfolio/Header';
+import HeroCard from '../components/portfolio/HeroCard';
+import Skills from '../components/portfolio/Skills';
+import ExperienceCard from '../components/portfolio/ExperienceCard';
+import ProjectsGrid from '../components/portfolio/ProjectsGrid';
+import SectionCard from '../components/portfolio/SectionCard';
+import ContactCard from '../components/portfolio/ContactCard';
+import Footer from '../components/portfolio/Footer';
+import ChatHead from '../components/portfolio/ChatHead';
 
 export default function Portfolio() {
   return (
