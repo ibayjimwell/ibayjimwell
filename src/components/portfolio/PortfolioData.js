@@ -17,7 +17,6 @@ const portfolioData = {
     "React",
     "Next",
     "Express",
-    "Django",
     "PostgreSQL",
     "MongoDB",
     "Git",
